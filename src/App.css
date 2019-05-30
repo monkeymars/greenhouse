@@ -1,4 +1,33 @@
 .App {
+  display: inherit;
+}
+
+.header-nav {
+  height: 80px;
+  background: #fff;
+  border-bottom: 5px solid #fff;
+  margin-bottom: 20px;
+}
+
+.logo-box {
+  position: relative;
+  top: 36px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.cart-box {
+  font-size: 18px;
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 3px solid #333;
+}
+
+.product-list {
   text-align: center;
 }
 
