@@ -11,7 +11,7 @@ class Product extends React.Component {
 
     render() {
         return (
-            <div style={{marginBottom: '30px;'}}>
+            <div style={{marginBottom: '30px'}}>
                 <Grid.Column>
                     <Card>
                         <Image src='https://dummyimage.com/250x250.png/ff4444/ffffff' wrapped ui={false} />

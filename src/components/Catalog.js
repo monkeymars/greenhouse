@@ -1,15 +1,21 @@
 import React, { useEffect } from 'react';
 import { Container, Grid } from 'semantic-ui-react';
 import Product from './Product';
-import { MockData } from '../hooks/http';
+import { useHttp } from '../hooks/http';
+const MOCK_DATA = '../MOCK_DATA.json';
 
 const Catalog = props => {
 
-    const loadedCatalog = MockData ?
-        MockData:[];
+    const [isLoading, fetchData] = useHttp(
+        MOCK_DATA,
+        []
+    );
+
+    const loadedCatalog = fetchData ?
+        fetchData:[];
 
     let content = <p>Loading..</p>;
-    if (loadedCatalog) {
+    if (!isLoading && loadedCatalog) {
         content = (
             <Container>
                 <div className="product-list">
@@ -23,10 +29,10 @@ const Catalog = props => {
             </Container>
         )
     } else if (
-        !loadedCatalog
+        !isLoading && !loadedCatalog
     ) {
         content = <p>Could not fetch any data.</p>;
-    };
+    }
 
     return content;
 }
