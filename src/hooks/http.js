@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react'
-import Fetch from 'fetch'
+import MOCK_DATA from '../resource/MOCK_DATA.json';
 
 export const useHttp = (url, depedencies) => {
     const [isLoading, setIsLoading] = useState(false);
-    cosnt [fetchData, setFetchData] = useState(null);
-
+    const [fetchData, setFetchData] = useState(null);
     useEffect(() => {
         setIsLoading(true);
-        Fetch(url).then((response) => {
+        fetch(url).then((response) => {
             if (!response) {
                 throw new Error('Failed to fetch!');
             }
@@ -23,4 +22,12 @@ export const useHttp = (url, depedencies) => {
 
     return [isLoading, fetchData];
 
+}
+
+/**
+ * MockData
+ * @returns {Object} sample products
+ */
+export const MockData = () => {
+    return MOCK_DATA;
 }

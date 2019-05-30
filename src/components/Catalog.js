@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Grid } from 'semantic-ui-react';
 import Product from './Product';
-class Catalog extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            value: null
-        }
-    }
+import { MockData } from '../hooks/http';
 
-    render() {
-        return (
+const Catalog = props => {
+
+    const loadedCatalog = MockData ?
+        MockData:[];
+
+    let content = <p>Loading..</p>;
+    if (loadedCatalog) {
+        content = (
             <Container>
                 <div className="product-list">
                     <Grid>
@@ -22,7 +22,13 @@ class Catalog extends React.Component {
                 </div>
             </Container>
         )
-    }
+    } else if (
+        !loadedCatalog
+    ) {
+        content = <p>Could not fetch any data.</p>;
+    };
+
+    return content;
 }
 
 export default Catalog;
