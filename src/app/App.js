@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import 'semantic-ui-css/semantic.min.css';
-import Header from './components/Header';
-import Catalog from './components/Catalog';
+import Header from '../containers/Header';
+import Catalog from '../containers/Catalog';
 
 function App() {
   return (
