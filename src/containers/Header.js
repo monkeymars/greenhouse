@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Container, Icon, Popup, Button, List, Image } from 'semantic-ui-react';
 import { removeCart } from '../actions/cartAction';
+import Currency from 'react-currency-formatter';
 
 class Header extends React.Component {
 
@@ -27,7 +28,9 @@ class Header extends React.Component {
                             cartItems.map((item) => {
                                 return (
                                     <List.Item key={item.id}>
-                                        <List.Content floated='right'>{item.price}</List.Content>
+                                        <List.Content floated='right'>
+                                            <Currency quantity={item.price} currency="IDR"/>
+                                        </List.Content>
                                         <List.Content>
                                             <strong>{item.product_name}</strong>
                                         </List.Content>
@@ -36,7 +39,9 @@ class Header extends React.Component {
                             })
                         }
                         <List.Item>
-                            <List.Content floated='right'>{this.cartTotal(cartItems)}</List.Content>
+                            <List.Content floated='right'>
+                                <strong><Currency quantity={this.cartTotal(cartItems)} currency="IDR"/></strong>
+                            </List.Content>
                             <List.Content>
                                 <strong>{`Total`}</strong>
                             </List.Content>
