@@ -4,7 +4,7 @@ import {
 } from 'react'
 import axios from 'axios';
 
-export const useHttp = (url, depedencies) => {
+export const useHttp = (url, []) => {
     const [isLoading, setIsLoading] = useState(false);
     const [fetchData, setFetchData] = useState(null);
     useEffect(() => {
@@ -16,7 +16,7 @@ export const useHttp = (url, depedencies) => {
             setIsLoading(false);
             console.log(err);
         });
-    }, depedencies);
+    }, []);
 
     return [isLoading, fetchData];
 

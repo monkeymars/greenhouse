@@ -10,12 +10,17 @@ const cartReducer = (state = {
                 listProduct: [...state.listProduct, action.payload.product]
             };
             break;
+
         case "REMOVE_ITEM":
             state = {
                 totals: state.totals - action.payload.price,
                 listProduct: [...state.listProduct, action.payload.product]
             }
             break;
+
+        default:
+            break;
+
     }
     return state;
 };

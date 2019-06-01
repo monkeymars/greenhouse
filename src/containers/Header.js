@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Container, Icon, Popup, Button, List, Image } from 'semantic-ui-react';
+import { Container, Icon, Popup, Button, List } from 'semantic-ui-react';
 import { removeCart } from '../actions/cartAction';
 import Currency from 'react-currency-formatter';
 
@@ -17,7 +17,7 @@ class Header extends React.Component {
             padding: '2em',
             width: '400px'
         }
-        const cartItems = this.props.cart.listProduct
+        const cartItems = this.props.cart.listProduct;
         const popupTrigger = (<span><Icon link name='cart'/> {cartItems.length}</span>)
         let popupContent = <div></div>;
         if (cartItems.length) {
@@ -48,7 +48,7 @@ class Header extends React.Component {
                         </List.Item>
                     </List>
                     <div style={{textAlign:'center'}}>
-                        <Button color='red' content='Checkout' />
+                        <Button color='red' href="/cart" content='Checkout' />
                     </div>
                 </div>
             )
