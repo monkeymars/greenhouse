@@ -1,7 +1,7 @@
 [{"id":1,"product_name":"Mushroom - Shitake, Dry","price":1730648,"product_image":"http://dummyimage.com/250x250.png/5fa2dd/ffffff"},
 {"id":2,"product_name":"Pork - Back Ribs","price":5156112,"product_image":"http://dummyimage.com/250x250.png/cc0000/ffffff"},
 {"id":3,"product_name":"Absolut Citron","price":7509816,"product_image":"http://dummyimage.com/250x250.png/cc0000/ffffff"},
-{"id":4,"product_name":"Wine - Prem Select Charddonany","price":68020,"product_image":"http://dummyimage.com/250x250.png/ff4444/ffffff"},
+{"id":4,"product_name":"Prem Select Charddonany","price":68020,"product_image":"http://dummyimage.com/250x250.png/ff4444/ffffff"},
 {"id":5,"product_name":"Pasta - Lasagne, Fresh","price":508505,"product_image":"http://dummyimage.com/250x250.png/5fa2dd/ffffff"},
 {"id":6,"product_name":"Yukon Jack","price":8208784,"product_image":"http://dummyimage.com/250x250.png/ff4444/ffffff"},
 {"id":7,"product_name":"Mushroom - White Button","price":8799058,"product_image":"http://dummyimage.com/250x250.png/cc0000/ffffff"},
@@ -46,5 +46,5 @@
 {"id":46,"product_name":"Banana Turning","price":300001,"product_image":"http://dummyimage.com/250x250.png/dddddd/000000"},
 {"id":47,"product_name":"Paste - Black Olive","price":1414376,"product_image":"http://dummyimage.com/250x250.png/dddddd/000000"},
 {"id":48,"product_name":"Wine - Pinot Noir Pond Haddock","price":7691504,"product_image":"http://dummyimage.com/250x250.png/5fa2dd/ffffff"},
-{"id":49,"product_name":"Pasta - Canelloni, Single Serve","price":8126042,"product_image":"http://dummyimage.com/250x250.png/cc0000/ffffff"},
+{"id":49,"product_name":"Pasta - Canelloni","price":8126042,"product_image":"http://dummyimage.com/250x250.png/cc0000/ffffff"},
 {"id":50,"product_name":"Coffee - Frthy Coffee Crisp","price":6427381,"product_image":"http://dummyimage.com/250x250.png/5fa2dd/ffffff"}]
