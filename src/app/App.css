@@ -3,10 +3,10 @@
 }
 
 .header-nav {
-  height: 80px;
+  height: 90px;
   background: #fff;
-  border-bottom: 5px solid #fff;
-  margin-bottom: 20px;
+  border-bottom: 5px solid #88bee8;
+  margin-bottom: 40px;
 }
 
 .logo-box {
@@ -29,6 +29,14 @@
 
 .product-list {
   text-align: center;
+}
+
+.remove-cart_btn {
+  background: transparent;
+  border: 0px;
+  color: #db2828;
+  margin-left: 15px;
+  cursor: pointer;
 }
 
 .catalog-price {

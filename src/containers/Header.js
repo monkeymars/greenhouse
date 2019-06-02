@@ -17,17 +17,19 @@ class Header extends React.Component {
             padding: '2em',
             width: '400px'
         }
+
         const cartItems = this.props.cart.listProduct;
         const popupTrigger = (<span><Icon link name='cart'/> {cartItems.length}</span>)
         let popupContent = <div></div>;
+
         if (cartItems.length) {
             popupContent = (
                 <div>
                     <List divided relaxed>
                         {
-                            cartItems.map((item) => {
+                            cartItems.map((item, index) => {
                                 return (
-                                    <List.Item key={item.id}>
+                                    <List.Item key={index}>
                                         <List.Content floated='right'>
                                             <Currency quantity={item.price} currency="IDR"/>
                                         </List.Content>
@@ -58,7 +60,7 @@ class Header extends React.Component {
             <div className="header-nav">
                 <Container>
                     <div className="logo-box" style={{textAlign:'center'}}>
-                        <span className="logo">Market Logo</span>
+                        <span className="logo"><a href="/" style={{color:'#333'}}>Logo</a></span>
                         <span className="cart-box">
                             <React.Fragment>
                                 <Popup flowing wide
@@ -90,8 +92,5 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
 
