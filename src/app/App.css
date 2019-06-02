@@ -27,6 +27,19 @@
   border-left: 3px solid #333;
 }
 
+.user-box {
+  margin-left: 20px;
+  color: #db3229;
+  font-size: 18px;
+}
+
+.logout {
+  margin-left: 15px;
+  cursor: pointer;
+  position: relative;
+  top: -2px;
+}
+
 .product-list {
   text-align: center;
 }

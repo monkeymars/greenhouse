@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Container, Icon, Popup, Button, List } from 'semantic-ui-react';
-import { removeCart } from '../actions/cartAction';
+import { logout } from '../actions/userAction';
 import Currency from 'react-currency-formatter';
 
 class Header extends React.Component {
@@ -62,17 +62,28 @@ class Header extends React.Component {
                     <div className="logo-box" style={{textAlign:'center'}}>
                         <span className="logo"><a href="/" style={{color:'#333'}}>Logo</a></span>
                         <span className="cart-box">
-                            <React.Fragment>
-                                <Popup flowing wide
-                                    offset='0, 10px'
-                                    trigger={popupTrigger}
-                                    content={popupContent}
-                                    position='bottom left'
-                                    style={style}
-                                    on='click'
-                                    />
-                            </React.Fragment>
+                            <Popup flowing wide
+                                offset='0, 10px'
+                                trigger={popupTrigger}
+                                content={popupContent}
+                                position='bottom left'
+                                style={style}
+                                on='click'
+                            />
                         </span>
+                        {   this.props.user.email &&
+                            <span className="user-box">
+                                <strong>{this.props.user.email}</strong>
+                            </span>
+                        }
+
+                        {   this.props.user.email &&
+                            <span className="logout">
+                                <a onClick={() => this.props.logout()}>
+                                    <small><strong>Logout</strong></small>
+                                </a>
+                            </span>
+                        }
                     </div>
                 </Container>
             </div>
@@ -81,13 +92,16 @@ class Header extends React.Component {
 };
 
 const mapStateToProps = (state) => {
-    return { cart: state.cart };
+    return {
+        cart: state.cart,
+        user: state.user
+    };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        removeCart: (product) => {
-            dispatch(removeCart(product));
+        logout: () => {
+            dispatch(logout());
         }
     };
 };
