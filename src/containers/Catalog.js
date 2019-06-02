@@ -3,7 +3,7 @@ import { Container, Grid } from 'semantic-ui-react';
 import Product from './Product';
 import Loading from '../components/loading';
 import { useHttp } from '../hooks/http';
-const MOCK_DATA = '../MOCK_DATA.json';
+const MOCK_DATA = window.location.origin + '/MOCK_DATA.json';
 
 const Catalog = props => {
 
