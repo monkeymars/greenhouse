@@ -8,9 +8,13 @@ export function addCart (product) {
     }
 }
 
-export function removeCart (product) {
+export function removeCart (product, index) {
     return {
         type: "REMOVE_ITEM",
-        payload: product
+        payload: {
+            index: index,
+            price: product.price,
+            product: product
+        }
     }
 }
