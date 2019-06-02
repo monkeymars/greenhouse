@@ -1,3 +1,4 @@
 #!/bin/bash
-npm run build;
-npm run deploy;
+heroku login
+git push heroku master
+heroku open
