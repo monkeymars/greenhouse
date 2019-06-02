@@ -19,6 +19,7 @@ class Cart extends React.Component {
         return () => {
             this.props.placeOrder(this.props.cart.listProduct);
             this.props.clearCart();
+            this.props.history.push(`/order/complete`);
         }
     }
 
@@ -58,15 +59,19 @@ class Cart extends React.Component {
                             </Grid.Column>
                             <Grid.Column>
                                 <div style={{textAlign:'center'}}>
-                                    <GoogleLogin
-                                        clientId="438627225820-cfb456teukq4hsom88pgi9heucgsb7kv.apps.googleusercontent.com"
-                                        buttonText="Login to Place Order" onSuccess={this.responseGoogle} onFailure={this.responseGoogle}
-                                        cookiePolicy={'single_host_origin'}
-                                    />
+                                    {
+                                        !this.props.user.email &&
+                                        <div>
+                                            <GoogleLogin
+                                                clientId="438627225820-cfb456teukq4hsom88pgi9heucgsb7kv.apps.googleusercontent.com"
+                                                buttonText="Login to Place Order" onSuccess={this.responseGoogle} onFailure={this.responseGoogle}
+                                                cookiePolicy={'single_host_origin'}
+                                            />
+                                            <br/>
+                                        </div>
+                                    }
 
-                                    <br/>
-
-                                    <Button disabled={!this.props.user.isLoggedIn} style={{marginTop:'15px'}}
+                                    <Button disabled={!this.props.user.isLoggedIn} style={{marginTop:'10px'}}
                                         onClick={this.placeOrder()}
                                         color='red' content='Place Order'
                                     />
