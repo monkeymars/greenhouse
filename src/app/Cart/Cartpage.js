@@ -61,7 +61,8 @@ class Cart extends React.Component {
                                         !this.props.user.email &&
                                         <div>
                                             <GoogleLogin
-                                                clientId="438627225820-cfb456teukq4hsom88pgi9heucgsb7kv.apps.googleusercontent.com"
+                                                // 438627225820-cfb456teukq4hsom88pgi9heucgsb7kv.apps.googleusercontent.com
+                                                clientId="438627225820-a1mnpbaf57olun255rn18f2tntmrt9kv.apps.googleusercontent.com"
                                                 buttonText="Login to Place Order" onSuccess={this.responseGoogle} onFailure={this.responseGoogle}
                                                 cookiePolicy={'single_host_origin'}
                                             />
