@@ -29,8 +29,6 @@ class Cart extends React.Component {
 
     render() {
         const cartItems = this.props.cart.listProduct;
-        console.log('order', this.props.user.order);
-
         return (
             <div className="App">
                 <Container style={{width:'800px'}}>
