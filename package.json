@@ -2,6 +2,7 @@
   "name": "greenhouse",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://monkeymars.github.io/greenhouse",
   "dependencies": {
     "axios": "^0.19.0",
     "gh-pages": "^2.0.1",
@@ -41,6 +42,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "homepage": "https://monkeymars.github.io/greenhouse"
+  }
 }
