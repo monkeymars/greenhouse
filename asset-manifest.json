@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/greenhouse/static/css/main.5c876ada.chunk.css",
-    "main.js": "/greenhouse/static/js/main.fff83188.chunk.js",
-    "main.js.map": "/greenhouse/static/js/main.fff83188.chunk.js.map",
-    "runtime~main.js": "/greenhouse/static/js/runtime~main.c461acbb.js",
-    "runtime~main.js.map": "/greenhouse/static/js/runtime~main.c461acbb.js.map",
-    "static/css/2.36f90c06.chunk.css": "/greenhouse/static/css/2.36f90c06.chunk.css",
-    "static/js/2.936b51ba.chunk.js": "/greenhouse/static/js/2.936b51ba.chunk.js",
-    "static/js/2.936b51ba.chunk.js.map": "/greenhouse/static/js/2.936b51ba.chunk.js.map",
-    "index.html": "/greenhouse/index.html",
-    "precache-manifest.13a69daf7bcdadc57b14fd61a8388e09.js": "/greenhouse/precache-manifest.13a69daf7bcdadc57b14fd61a8388e09.js",
-    "service-worker.js": "/greenhouse/service-worker.js",
-    "static/css/2.36f90c06.chunk.css.map": "/greenhouse/static/css/2.36f90c06.chunk.css.map",
-    "static/css/main.5c876ada.chunk.css.map": "/greenhouse/static/css/main.5c876ada.chunk.css.map",
-    "static/media/semantic.min.css": "/greenhouse/static/media/outline-icons.ef60a4f6.woff"
+    "main.css": "/greenhouse-co/static/css/main.5c876ada.chunk.css",
+    "main.js": "/greenhouse-co/static/js/main.05405c51.chunk.js",
+    "main.js.map": "/greenhouse-co/static/js/main.05405c51.chunk.js.map",
+    "runtime~main.js": "/greenhouse-co/static/js/runtime~main.f96e0202.js",
+    "runtime~main.js.map": "/greenhouse-co/static/js/runtime~main.f96e0202.js.map",
+    "static/css/2.b217adb6.chunk.css": "/greenhouse-co/static/css/2.b217adb6.chunk.css",
+    "static/js/2.936b51ba.chunk.js": "/greenhouse-co/static/js/2.936b51ba.chunk.js",
+    "static/js/2.936b51ba.chunk.js.map": "/greenhouse-co/static/js/2.936b51ba.chunk.js.map",
+    "index.html": "/greenhouse-co/index.html",
+    "precache-manifest.2af834804d96a06b4db8b92ab2274173.js": "/greenhouse-co/precache-manifest.2af834804d96a06b4db8b92ab2274173.js",
+    "service-worker.js": "/greenhouse-co/service-worker.js",
+    "static/css/2.b217adb6.chunk.css.map": "/greenhouse-co/static/css/2.b217adb6.chunk.css.map",
+    "static/css/main.5c876ada.chunk.css.map": "/greenhouse-co/static/css/main.5c876ada.chunk.css.map",
+    "static/media/semantic.min.css": "/greenhouse-co/static/media/outline-icons.ef60a4f6.woff"
   }
 }
