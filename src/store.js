@@ -6,6 +6,7 @@ import {
 } from 'redux';
 import logger from 'redux-logger';
 import cart from './reducers/cartReducer';
+import user from './reducers/userReducer';
 import persistState from 'redux-localstorage'
 
 const enhancer = compose(
@@ -14,5 +15,5 @@ const enhancer = compose(
 );
 
 export default createStore(
-    combineReducers({ cart }), {}, enhancer
+    combineReducers({ cart, user }), {}, enhancer
 );

@@ -18,3 +18,10 @@ export function removeCart (product, index) {
         }
     }
 }
+
+export function clearCart () {
+    return {
+        type: "CLEAR_CART",
+        payload: {}
+    }
+}

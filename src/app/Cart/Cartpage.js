@@ -1,21 +1,35 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Container, Grid, List, Icon } from 'semantic-ui-react';
-import { removeCart } from '../../actions/cartAction';
+import { Container, Grid, List, Icon, Button } from 'semantic-ui-react';
+import { removeCart, clearCart } from '../../actions/cartAction';
+import { placeOrder, saveCredential } from '../../actions/userAction';
 import Currency from 'react-currency-formatter';
+import GoogleLogin from 'react-google-login';
+
 
 class Cart extends React.Component {
 
     removeItem = (item, index) => {
         return () => {
             this.props.removeCart(item, index);
-            console.log(item, index);
-
         }
+    }
+
+    placeOrder = () => {
+        return () => {
+            this.props.placeOrder(this.props.cart.listProduct);
+            this.props.clearCart();
+        }
+    }
+
+    responseGoogle = (response) => {
+        this.props.saveCredential(response.tokenId, response.profileObj.email)
     }
 
     render() {
         const cartItems = this.props.cart.listProduct;
+        console.log('order', this.props.user.order);
+
         return (
             <div className="App">
                 <Container style={{width:'800px'}}>
@@ -43,7 +57,20 @@ class Cart extends React.Component {
                                 </div>
                             </Grid.Column>
                             <Grid.Column>
+                                <div style={{textAlign:'center'}}>
+                                    <GoogleLogin
+                                        clientId="438627225820-cfb456teukq4hsom88pgi9heucgsb7kv.apps.googleusercontent.com"
+                                        buttonText="Login to Place Order" onSuccess={this.responseGoogle} onFailure={this.responseGoogle}
+                                        cookiePolicy={'single_host_origin'}
+                                    />
 
+                                    <br/>
+
+                                    <Button disabled={!this.props.user.isLoggedIn} style={{marginTop:'15px'}}
+                                        onClick={this.placeOrder()}
+                                        color='red' content='Place Order'
+                                    />
+                                </div>
                             </Grid.Column>
                         </Grid.Row>
                     </Grid>
@@ -54,13 +81,28 @@ class Cart extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    return { cart: state.cart };
+    return {
+        cart: state.cart,
+        user: state.user
+    };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
         removeCart: (product, index) => {
             dispatch(removeCart(product, index));
+        },
+
+        clearCart: () => {
+            dispatch(clearCart());
+        },
+
+        saveCredential: (token, email) => {
+            dispatch(saveCredential(token, email));
+        },
+
+        placeOrder: (cart) => {
+            dispatch(placeOrder(cart));
         }
     };
 };

@@ -21,6 +21,12 @@ const cartReducer = (state = {
             }
             break;
 
+        case "CLEAR_CART":
+            state = {
+                ...state,
+                listProduct: []
+            }
+            break;
         default:
             break;
 
